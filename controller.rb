@@ -4,6 +4,14 @@ require('pry-byebug')
 require_relative('./models/game')
 also_reload('./game/*')
 
+get '/' do
+  erb (:home)
+end
+
+get '/rules' do
+  erb (:rules)
+end
+
 get '/:thing1/:thing2' do
   game = Game.new(params[:thing1], params[:thing2])
   @game_result = game.rock_paper_scissors_game()
