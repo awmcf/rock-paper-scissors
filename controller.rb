@@ -17,3 +17,5 @@ get '/:thing1/:thing2' do
   @game_result = game.rock_paper_scissors_game()
   erb (:result)
 end
+
+# If we wanted to give some feedback about which player won the game- In my case statements I would just change the return string to "Player 1 wins!" or "Player 2 wins!" depending on which thing won, in what order.
